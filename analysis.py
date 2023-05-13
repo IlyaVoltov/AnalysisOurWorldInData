@@ -21,15 +21,15 @@ data = pandas.read_csv('Non-stateWarData_v4.0.csv', index_col='WarName')
 
 dup_value = data['SideA1']
 
-duplicate_elements = {}
+duplicate_elements_SideA1 = {}
 
 for item in dup_value:                      # Теперь пройдёмся по нашему неупорядоченному списку при помощи цикла for
-    if item in duplicate_elements:          # Внутри цикла добавим условие
-        duplicate_elements[item] += 1       # если итерабельный элемент присутствует в словаре duplicate_elements, то прибавляем к значению ключа единицу,
+    if item in duplicate_elements_SideA1:          # Внутри цикла добавим условие
+        duplicate_elements_SideA1[item] += 1       # если итерабельный элемент присутствует в словаре duplicate_elements, то прибавляем к значению ключа единицу,
     else:
-        duplicate_elements[item] = 1        # при else в словарь будет добавляться новый ключ, которого в нём ранее не было
+        duplicate_elements_SideA1[item] = 1        # при else в словарь будет добавляться новый ключ, которого в нём ранее не было
 
 # if duplicate_elements > 1:
 #     print(duplicate_elements)
 
-print(duplicate_elements)
+print(duplicate_elements_SideA1)
