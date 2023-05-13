@@ -29,4 +29,7 @@ for item in dup_value:                      # Теперь пройдёмся п
     else:
         duplicate_elements[item] = 1        # при else в словарь будет добавляться новый ключ, которого в нём ранее не было
 
+# if duplicate_elements > 1:
+#     print(duplicate_elements)
+
 print(duplicate_elements)
