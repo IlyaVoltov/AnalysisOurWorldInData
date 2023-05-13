@@ -3,7 +3,15 @@ import pandas as pd
 
 data = pd.read_csv('Non-stateWarData_v4.0.csv')
 
-def generate_table(dataframe, max_rows=60):
+df = pd.DataFrame(data)
+
+#df['TotalCombatDeaths'] = df['TotalCombatDeaths'].astype (int)
+
+df = df[['WarName', 'StartYear', 'EndYear', 'TotalCombatDeaths']]
+
+#df = df[df.TotalCombatDeaths > 0]
+
+def generate_table(dataframe, max_rows=62):
     return html.Table([
         html.Thead(
             html.Tr([html.Th(col) for col in dataframe.columns])
@@ -20,7 +28,7 @@ app = Dash(__name__)
 
 app.layout = html.Div([
     html.H4(children='List of wars'),
-    generate_table(data)
+    generate_table(df)
 ])
 
 if __name__ == '__main__':
