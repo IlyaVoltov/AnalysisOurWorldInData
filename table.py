@@ -7,7 +7,7 @@ df = pd.DataFrame(data)
 
 #df['TotalCombatDeaths'] = df['TotalCombatDeaths'].astype (int)
 
-df = df[['WarName', 'StartYear', 'EndYear', 'TotalCombatDeaths']]
+#df = df[['WarName', 'StartYear', 'EndYear', 'TotalCombatDeaths']]
 
 #df = df[df.TotalCombatDeaths > 0]
 

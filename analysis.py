@@ -19,17 +19,20 @@ data = pandas.read_csv('Non-stateWarData_v4.0.csv', index_col='WarName')
 
 # поработаем со сторонами конфликта (SideA1, SideA2, SideB1, SideB2, SideB3, SideB4, SideB5)
 
-dup_value = data['Initiator']
+#dup_value = data['Initiator']
 
-duplicate_elements = {}
+#duplicate_elements = {}
 
-for item in dup_value:                      # Теперь пройдёмся по нашему неупорядоченному списку при помощи цикла for
-    if item in duplicate_elements:          # Внутри цикла добавим условие
-        duplicate_elements[item] += 1       # если итерабельный элемент присутствует в словаре duplicate_elements, то прибавляем к значению ключа единицу,
-    else:
-        duplicate_elements[item] = 1        # при else в словарь будет добавляться новый ключ, которого в нём ранее не было
+#for item in dup_value:                      # Теперь пройдёмся по нашему неупорядоченному списку при помощи цикла for
+    #if item in duplicate_elements:          # Внутри цикла добавим условие
+        #duplicate_elements[item] += 1       # если итерабельный элемент присутствует в словаре duplicate_elements, то прибавляем к значению ключа единицу,
+    #else:
+        #duplicate_elements[item] = 1        # при else в словарь будет добавляться новый ключ, которого в нём ранее не было
 
 # if duplicate_elements > 1:
 #     print(duplicate_elements)
 
-print(duplicate_elements)
+#print(duplicate_elements)
+
+
+print(type(data['EndYear']))
